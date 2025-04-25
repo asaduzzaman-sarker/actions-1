@@ -3,20 +3,60 @@ name: My first workflow
 on: push
 
 jobs:
+  
   first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout Repo
+      - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: welcome message
-        run: echo "Welcome"
-      
-      - name: list files
+
+      - name: Welcome message
+        run: echo "Welcome from first_job"
+
+      - name: List files
         run: ls
-      
-      - name: read file
+
+      - name: Read README file
         run: cat README.md
+
       - name: Run tests
         run: |
           python -m unittest discover
 
+  first_job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Welcome message
+        run: echo "Welcome from first_job1"
+
+      - name: List files
+        run: ls
+
+      - name: Read README file
+        run: cat README.md
+
+      - name: Run tests
+        run: |
+          python -m unittest discover
+
+  first_job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Welcome message
+        run: echo "Welcome from first_job2"
+
+      - name: List files
+        run: ls
+
+      - name: Read README file
+        run: cat README.md
+
+      - name: Run tests
+        run: |
+          python -m unittest discover
