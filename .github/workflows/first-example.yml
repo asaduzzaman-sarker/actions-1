@@ -16,5 +16,7 @@ jobs:
       
       - name: read file
         run: cat README.md
-
+      - name: Run tests
+        run: |
+          python -m unittest discover
 
